@@ -1,0 +1,679 @@
+@prefix : <urn:absolute:www.espritgaming.com/stage1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:absolute:www.espritgaming.com/stage1> .
+
+<urn:absolute:www.espritgaming.com/stage1> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  urn:absolute:www.espritgaming.com/stage1/childOf
+<urn:absolute:www.espritgaming.com/stage1/childOf> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                                   rdfs:range <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/currentLocation
+<urn:absolute:www.espritgaming.com/stage1/currentLocation> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <urn:absolute:www.espritgaming.com/stage1/PLAYER> ;
+                                                           rdfs:range <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/localisationNeighbor
+<urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                                                rdfs:range <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  urn:absolute:www.espritgaming.com/stage1/answer
+<urn:absolute:www.espritgaming.com/stage1/answer> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <urn:absolute:www.espritgaming.com/stage1/GARD> ;
+                                                  rdfs:range xsd:string .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/attemptNbr
+<urn:absolute:www.espritgaming.com/stage1/attemptNbr> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <urn:absolute:www.espritgaming.com/stage1/GARD> ;
+                                                      rdfs:range xsd:int .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/hasMagic
+<urn:absolute:www.espritgaming.com/stage1/hasMagic> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                                    rdfs:range xsd:string .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/hasSurprise
+<urn:absolute:www.espritgaming.com/stage1/hasSurprise> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <urn:absolute:www.espritgaming.com/stage1/ROOM> ;
+                                                       rdfs:range xsd:string .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/health
+<urn:absolute:www.espritgaming.com/stage1/health> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <urn:absolute:www.espritgaming.com/stage1/PLAYER> ;
+                                                  rdfs:range xsd:int .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/hp
+<urn:absolute:www.espritgaming.com/stage1/hp> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <urn:absolute:www.espritgaming.com/stage1/TRAP> ;
+                                              rdfs:range xsd:int .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/inFailure
+<urn:absolute:www.espritgaming.com/stage1/inFailure> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <urn:absolute:www.espritgaming.com/stage1/GARD> ;
+                                                     rdfs:range xsd:string .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/isVisited
+<urn:absolute:www.espritgaming.com/stage1/isVisited> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <urn:absolute:www.espritgaming.com/stage1/GARD> ;
+                                                     rdfs:range xsd:boolean .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/question
+<urn:absolute:www.espritgaming.com/stage1/question> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <urn:absolute:www.espritgaming.com/stage1/GARD> ;
+                                                    rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  urn:absolute:www.espritgaming.com/stage1/GARD
+<urn:absolute:www.espritgaming.com/stage1/GARD> rdf:type owl:Class .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/LOCALISATION
+<urn:absolute:www.espritgaming.com/stage1/LOCALISATION> rdf:type owl:Class .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/PLAYER
+<urn:absolute:www.espritgaming.com/stage1/PLAYER> rdf:type owl:Class .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/ROOM
+<urn:absolute:www.espritgaming.com/stage1/ROOM> rdf:type owl:Class .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/TRAP
+<urn:absolute:www.espritgaming.com/stage1/TRAP> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  urn:absolute:www.espritgaming.com/stage1/Hunter
+<urn:absolute:www.espritgaming.com/stage1/Hunter> rdf:type owl:NamedIndividual ,
+                                                           <urn:absolute:www.espritgaming.com/stage1/PLAYER> ;
+                                                  <urn:absolute:www.espritgaming.com/stage1/currentLocation> <urn:absolute:www.espritgaming.com/stage1/p00> ;
+                                                  <urn:absolute:www.espritgaming.com/stage1/health> 100 .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/g1
+<urn:absolute:www.espritgaming.com/stage1/g1> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/GARD> ;
+                                              <urn:absolute:www.espritgaming.com/stage1/answer> "my son" ;
+                                              <urn:absolute:www.espritgaming.com/stage1/attemptNbr> 3 ;
+                                              <urn:absolute:www.espritgaming.com/stage1/inFailure> "p00" ;
+                                              <urn:absolute:www.espritgaming.com/stage1/isVisited> "false"^^xsd:boolean ;
+                                              <urn:absolute:www.espritgaming.com/stage1/question> """Brothers and sisters I have none but this man's father is my father's son.
+Who is the man?""" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/g2
+<urn:absolute:www.espritgaming.com/stage1/g2> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/GARD> ;
+                                              <urn:absolute:www.espritgaming.com/stage1/answer> "nothing" ;
+                                              <urn:absolute:www.espritgaming.com/stage1/attemptNbr> 3 ;
+                                              <urn:absolute:www.espritgaming.com/stage1/inFailure> "p30" ;
+                                              <urn:absolute:www.espritgaming.com/stage1/isVisited> "false"^^xsd:boolean ;
+                                              <urn:absolute:www.espritgaming.com/stage1/question> """What is greater than God,
+more evil than the devil,
+the poor have it,
+the rich need it,
+and if you eat it, you'll die?""" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/g3
+<urn:absolute:www.espritgaming.com/stage1/g3> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/GARD> ;
+                                              <urn:absolute:www.espritgaming.com/stage1/answer> "a stamp" ;
+                                              <urn:absolute:www.espritgaming.com/stage1/attemptNbr> 3 ;
+                                              <urn:absolute:www.espritgaming.com/stage1/inFailure> "p78" ;
+                                              <urn:absolute:www.espritgaming.com/stage1/isVisited> "false"^^xsd:boolean ;
+                                              <urn:absolute:www.espritgaming.com/stage1/question> "What can travel around the world while staying in a corner?" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p00
+<urn:absolute:www.espritgaming.com/stage1/p00> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r1> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p01> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p01
+<urn:absolute:www.espritgaming.com/stage1/p01> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r2> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p00> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p02> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p02
+<urn:absolute:www.espritgaming.com/stage1/p02> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r2> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p03> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p12> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p03
+<urn:absolute:www.espritgaming.com/stage1/p03> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r2> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p02> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p13> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p08
+<urn:absolute:www.espritgaming.com/stage1/p08> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r12> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p18> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/hasMagic> "t3" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p12
+<urn:absolute:www.espritgaming.com/stage1/p12> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r2> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p02> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p13> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p13
+<urn:absolute:www.espritgaming.com/stage1/p13> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r2> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p03> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p12> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p23> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p15
+<urn:absolute:www.espritgaming.com/stage1/p15> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r11> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p16> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p25> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p16
+<urn:absolute:www.espritgaming.com/stage1/p16> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r11> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p15> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p17> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p17
+<urn:absolute:www.espritgaming.com/stage1/p17> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r11> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p16> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p18> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p18
+<urn:absolute:www.espritgaming.com/stage1/p18> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r12> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p08> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p17> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p20
+<urn:absolute:www.espritgaming.com/stage1/p20> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r3> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p21> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p30> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/hasMagic> "t2" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p21
+<urn:absolute:www.espritgaming.com/stage1/p21> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r3> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p20> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p31> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p23
+<urn:absolute:www.espritgaming.com/stage1/p23> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r6> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p13> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p33> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p25
+<urn:absolute:www.espritgaming.com/stage1/p25> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r11> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p15> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p35> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p27
+<urn:absolute:www.espritgaming.com/stage1/p27> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r11> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p17> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p37> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p30
+<urn:absolute:www.espritgaming.com/stage1/p30> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r3> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p20> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p31> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p31
+<urn:absolute:www.espritgaming.com/stage1/p31> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r3> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p21> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p30> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p32> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p32
+<urn:absolute:www.espritgaming.com/stage1/p32> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r6> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p31> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p33> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p33
+<urn:absolute:www.espritgaming.com/stage1/p33> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r6> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p23> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p32> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p43> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p35
+<urn:absolute:www.espritgaming.com/stage1/p35> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r11> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p25> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p36> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/hasMagic> "t1" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p36
+<urn:absolute:www.espritgaming.com/stage1/p36> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r11> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p35> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p37> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p37
+<urn:absolute:www.espritgaming.com/stage1/p37> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r11> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p27> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p36> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p38> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p47> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p38
+<urn:absolute:www.espritgaming.com/stage1/p38> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r10> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p37> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p39> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p39
+<urn:absolute:www.espritgaming.com/stage1/p39> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r10> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p38> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p49> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p43
+<urn:absolute:www.espritgaming.com/stage1/p43> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r7> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p33> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p53> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p47
+<urn:absolute:www.espritgaming.com/stage1/p47> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r13> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p37> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p49
+<urn:absolute:www.espritgaming.com/stage1/p49> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r10> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p39> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p59> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p50
+<urn:absolute:www.espritgaming.com/stage1/p50> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r4> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p51> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p60> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p51
+<urn:absolute:www.espritgaming.com/stage1/p51> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r4> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p50> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p52> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p61> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p52
+<urn:absolute:www.espritgaming.com/stage1/p52> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r7> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p51> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p53> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p53
+<urn:absolute:www.espritgaming.com/stage1/p53> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r7> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p43> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p52> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p63> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p58
+<urn:absolute:www.espritgaming.com/stage1/p58> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r9> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p59> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p68> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p59
+<urn:absolute:www.espritgaming.com/stage1/p59> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r9> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p49> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p58> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p69> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p60
+<urn:absolute:www.espritgaming.com/stage1/p60> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r4> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p50> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p61> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p61
+<urn:absolute:www.espritgaming.com/stage1/p61> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r4> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p51> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p71> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p63
+<urn:absolute:www.espritgaming.com/stage1/p63> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r7> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p53> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p73> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p67
+<urn:absolute:www.espritgaming.com/stage1/p67> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r9> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p68> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p77> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p68
+<urn:absolute:www.espritgaming.com/stage1/p68> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r9> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p58> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p67> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p69> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p78> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p69
+<urn:absolute:www.espritgaming.com/stage1/p69> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r9> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p59> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p68> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p79> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p71
+<urn:absolute:www.espritgaming.com/stage1/p71> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r5> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p61> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p81> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p73
+<urn:absolute:www.espritgaming.com/stage1/p73> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r7> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p63> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p83> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p75
+<urn:absolute:www.espritgaming.com/stage1/p75> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r8> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p76> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p85> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p76
+<urn:absolute:www.espritgaming.com/stage1/p76> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r8> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p77> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p86> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p77
+<urn:absolute:www.espritgaming.com/stage1/p77> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r9> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p67> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p76> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p78> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p78
+<urn:absolute:www.espritgaming.com/stage1/p78> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r9> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p68> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p77> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p79> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p79
+<urn:absolute:www.espritgaming.com/stage1/p79> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r9> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p69> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p78> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/hasMagic> "t2" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p81
+<urn:absolute:www.espritgaming.com/stage1/p81> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r5> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p71> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p83
+<urn:absolute:www.espritgaming.com/stage1/p83> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r7> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p73> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p84> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/hasMagic> "t1" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p84
+<urn:absolute:www.espritgaming.com/stage1/p84> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r7> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p83> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p85> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p85
+<urn:absolute:www.espritgaming.com/stage1/p85> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r8> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p75> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p84> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p86> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/p86
+<urn:absolute:www.espritgaming.com/stage1/p86> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/LOCALISATION> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/childOf> <urn:absolute:www.espritgaming.com/stage1/r8> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/localisationNeighbor> <urn:absolute:www.espritgaming.com/stage1/p76> ,
+                                                                                                               <urn:absolute:www.espritgaming.com/stage1/p85> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r1
+<urn:absolute:www.espritgaming.com/stage1/r1> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r10
+<urn:absolute:www.espritgaming.com/stage1/r10> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r11
+<urn:absolute:www.espritgaming.com/stage1/r11> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/ROOM> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/hasSurprise> "g3" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r12
+<urn:absolute:www.espritgaming.com/stage1/r12> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r13
+<urn:absolute:www.espritgaming.com/stage1/r13> rdf:type owl:NamedIndividual ,
+                                                        <urn:absolute:www.espritgaming.com/stage1/ROOM> ;
+                                               <urn:absolute:www.espritgaming.com/stage1/hasSurprise> "g2" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r2
+<urn:absolute:www.espritgaming.com/stage1/r2> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r3
+<urn:absolute:www.espritgaming.com/stage1/r3> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r4
+<urn:absolute:www.espritgaming.com/stage1/r4> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/ROOM> ;
+                                              <urn:absolute:www.espritgaming.com/stage1/hasSurprise> "g1" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r5
+<urn:absolute:www.espritgaming.com/stage1/r5> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/ROOM> ;
+                                              <urn:absolute:www.espritgaming.com/stage1/hasSurprise> "flouss" .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r6
+<urn:absolute:www.espritgaming.com/stage1/r6> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r7
+<urn:absolute:www.espritgaming.com/stage1/r7> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r8
+<urn:absolute:www.espritgaming.com/stage1/r8> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/r9
+<urn:absolute:www.espritgaming.com/stage1/r9> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/ROOM> .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/t1
+<urn:absolute:www.espritgaming.com/stage1/t1> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/TRAP> ;
+                                              <urn:absolute:www.espritgaming.com/stage1/hp> 20 .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/t2
+<urn:absolute:www.espritgaming.com/stage1/t2> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/TRAP> ;
+                                              <urn:absolute:www.espritgaming.com/stage1/hp> -50 .
+
+
+###  urn:absolute:www.espritgaming.com/stage1/t3
+<urn:absolute:www.espritgaming.com/stage1/t3> rdf:type owl:NamedIndividual ,
+                                                       <urn:absolute:www.espritgaming.com/stage1/TRAP> ;
+                                              <urn:absolute:www.espritgaming.com/stage1/hp> -100 .
+
+
+###  Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi
